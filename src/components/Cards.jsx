@@ -5,12 +5,14 @@ const Card = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(null);
     const [error, setError] = useState(null);
-
+    
     useEffect(() => {
+        setLoading(true);
         const fetchData = async () => {
             try {
                 const response = await axios.get('https://flameforge.glitch.me/api/character');
-                setData(response);
+                const data = response.data;
+                setData(data);
             } catch (error) {
                 setError(error)
             } finally {
