@@ -1,6 +1,6 @@
-import Card from './components/Cards'
 import Navbar from './components/Navbar'
 import Header from './components/Header'
+import Tabs from './components/Tabs'
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
     <>
     <Navbar />
     <Header />
-    {/* <Card /> */}
+    <Tabs />
     </>
   )
 }
